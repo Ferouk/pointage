@@ -12,7 +12,6 @@ export class EmployeeResolver {
   async getEmployeeByDateCreated(
     @Args() getEmployeeArgs: GetEmployeeArgs,
   ): Promise<Employee[]> {
-    console.log('date resolver', getEmployeeArgs);
     return this.employeeService.findByDateCreated(getEmployeeArgs);
   }
 
